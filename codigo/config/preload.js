@@ -14,13 +14,24 @@ function preload() {
 	iconeMapa = loadImage('imagens/icones/icone-mapa.png');
 	iconeContato = loadImage('imagens/icones/icone-contato.png');
 	iconePassaro = loadImage('imagens/icones/icone-passaro.png');
-	iconeGMaps = loadImage('imagens/icones/icone-gmaps.png');
 	iconePreserv = loadImage('imagens/icones/icone-preservacao.png');
+	fundoMenu = loadImage('imagens/icones/Menu.png');
+	fundoExibicao = loadImage('imagens/exibicao.png');
+	imgMascote = loadImage('imagens/mascote.png');
 	
+	// Ícones Tela Contatos
+	fundoAzul = loadImage('imagens/fundos/contatoAzul.png');
+	fundoAmarelo = loadImage('imagens/fundos/contatoAmarelo.png');
+	fundoVerde = loadImage('imagens/fundos/contatoVerde.png');
+	elipseContato = loadImage('imagens/elipseContato.png');
+	linhasContato = loadImage('imagens/linhasContato.png');
+	linhasCurtas = loadImage('imagens/linhasCurtas.png');
+	linhasLongas = loadImage('imagens/linhasLongas.png');
+
 	// Ícones Biodiversidade
-	iconeRepteis = loadImage('imagens/icones/icone-repteis.png');
-	iconeAves = loadImage('imagens/icones/icone-aves.png');
-	iconeAnfibios = loadImage('imagens/icones/icone-anfibios.png');
+	elipseBio = loadImage('imagens/elipseBio.png');
+	tituloBio = loadImage('imagens/tituloBio.png');
+	corpoBio = loadImage('imagens/corpoBio.png');
 
 	//Ícones Básicos Globais (Temporário)
 	iconeVoltar = loadImage('imagens/icones/icone-voltar.png');

@@ -1,0 +1,10 @@
+class TelaPreservacao{
+
+	constructor(){
+		
+	}
+
+	exibir(){
+		
+	}
+}

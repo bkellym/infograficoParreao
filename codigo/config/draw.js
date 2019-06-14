@@ -19,8 +19,7 @@ var alpha = 0;
 
 function draw(){
 	background(240);
-	maquinaEstadoTelas();
-	maquinaEstadoCartao();
+	telaBiodiversidade.exibir();
 }
 
 function maquinaEstadoTelas(){
@@ -58,15 +57,6 @@ function maquinaEstadoTelas(){
 			break;
 		case EstadoTelaInicial:
 			telaInicial.exibir();
-			break;
-		case EstadoTelaCategorias:
-			telaCategorias.exibir();
-			break;
-		case EstadoTelaContato:
-			telaConstrucao.exibir();
-			break;
-		case EstadoTelaPreservacao:
-			cartaoAnimal.exibir();
 			break;
 	}
 }
