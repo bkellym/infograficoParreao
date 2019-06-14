@@ -10,41 +10,39 @@ function preload() {
 	logoParque = loadImage('imagens/logos/logo-parque.png');
 	logoEquipe = loadImage('imagens/logos/logo-libertinos.png');
 
-	// Ícones Tela Inicial
-	iconeMapa = loadImage('imagens/icones/icone-mapa.png');
-	iconeContato = loadImage('imagens/icones/icone-contato.png');
-	iconePassaro = loadImage('imagens/icones/icone-passaro.png');
-	iconePreserv = loadImage('imagens/icones/icone-preservacao.png');
-	fundoMenu = loadImage('imagens/icones/Menu.png');
-	fundoExibicao = loadImage('imagens/exibicao.png');
-	imgMascote = loadImage('imagens/mascote.png');
+	// Tela Inicial
+	iconeInicio = loadImage('imagens/tela_mapa/icones/icone-inicio.png');
+	iconeBiodiversidade = loadImage('imagens/tela_mapa/icones/icone-biodiversidade.png');
+	iconeContato = loadImage('imagens/tela_mapa/icones/icone-contato.png');
+	iconePreserv = loadImage('imagens/tela_mapa/icones/icone-preservacao.png');
+	fundoMenu = loadImage('imagens/tela_mapa/menu.png');
+	fundoExibicao = loadImage('imagens/tela_mapa/exibicao.png');
+	posMascote = loadImage('imagens/tela_mapa/mascote.png');
+	mapa = loadImage('imagens/tela_mapa/mapa.png');
 	
-	// Ícones Tela Contatos
-	fundoAzul = loadImage('imagens/fundos/contatoAzul.png');
-	fundoAmarelo = loadImage('imagens/fundos/contatoAmarelo.png');
-	fundoVerde = loadImage('imagens/fundos/contatoVerde.png');
-	elipseContato = loadImage('imagens/elipseContato.png');
-	linhasContato = loadImage('imagens/linhasContato.png');
-	linhasCurtas = loadImage('imagens/linhasCurtas.png');
-	linhasLongas = loadImage('imagens/linhasLongas.png');
+	// Tela Contatos
+	fundoAzul = loadImage('imagens/tela_contatos/contatoAzul.png');
+	fundoAmarelo = loadImage('imagens/tela_contatos/contatoAmarelo.png');
+	fundoVerde = loadImage('imagens/tela_contatos/contatoVerde.png');
+	elipseContato = loadImage('imagens/tela_contatos/elipseContato.png');
+	linhasContato = loadImage('imagens/tela_contatos/linhasContato.png');
+	linhasCurtas = loadImage('imagens/tela_contatos/linhasCurtas.png');
+	linhasLongas = loadImage('imagens/tela_contatos/linhasLongas.png');
 
-	// Ícones Biodiversidade
-	elipseBio = loadImage('imagens/elipseBio.png');
-	tituloBio = loadImage('imagens/tituloBio.png');
-	corpoBio = loadImage('imagens/corpoBio.png');
+	// Tela Biodiversidade
+	elipseBio = loadImage('imagens/tela_biodiversidade/elipseBio.png');
+	tituloBio = loadImage('imagens/tela_biodiversidade/tituloBio.png');
+	corpoBio = loadImage('imagens/tela_biodiversidade/corpoBio.png');
 
-	//Ícones Básicos Globais (Temporário)
+	//Ícones Básicos Globais
 	iconeVoltar = loadImage('imagens/icones/icone-voltar.png');
-	iconeConstrucao = loadImage('imagens/icones/icone-construcao.png');
+	iconeConstrucao = loadImage('imagens/icones/icone-construcao.png'); //(Temporário)
 	
 	//Fotos
 	galoCampina = loadImage('imagens/fotos/galo-campina.jpg');
 	iguana = loadImage('imagens/fotos/iguana.jpg');
 	sapoBoi = loadImage('imagens/fotos/sapo-boi.jpg');
-	gato = loadImage('imagens/fotos/gato.jpg');
-
-	//Mapa
-	mapa = loadImage('imagens/mapa.png');
+	gato = loadImage('imagens/fotos/gato.jpg');	
 
 	// Fundos dos cartões
 	fundoPassaro = loadImage('imagens/fundos/fundo-passaro.png');
