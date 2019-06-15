@@ -19,7 +19,7 @@ var alpha = 0;
 
 function draw(){
 	background(240);
-	telaBiodiversidade.exibir();
+	telaInicial.exibir();
 }
 
 function maquinaEstadoTelas(){

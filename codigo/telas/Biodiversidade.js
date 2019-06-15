@@ -1,6 +1,9 @@
 class TelaBiodiversidade{
 
 	constructor(){
+
+		this.menu = new Menu();
+
 		this.objElipseBio = new Objetos(elipseBio, width/3.8, height/2, width/2.2, width/2.2);
 
 		this.objTituloBio1 = new Objetos(tituloBio, width/1.6, height/6.4, width/4.8, (width/4.8) * 0.2);
@@ -20,5 +23,7 @@ class TelaBiodiversidade{
 
 		this.objCorpoBio1.exibir();
 		this.objCorpoBio2.exibir();
+
+		this.menu.exibir();
 	}
 }

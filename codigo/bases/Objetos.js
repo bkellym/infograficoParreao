@@ -1,3 +1,5 @@
+let timerHover = 0;
+
 class Objetos {
 	constructor(img, x, y, a, l){
 		this.imagem = img;
@@ -6,45 +8,127 @@ class Objetos {
 		this.posX = x;
 		this.posY = y;
 
+		this.rectTamLMax = this.raioABase*1.2;
+		this.rectTamAMax = this.rectTamLMax/2;
+
+		this.rectTamL = 0;
+		this.rectTamA = 0;
+
 		this.hover = false;
 
 		this.raioA = this.raioABase;
 		this.raioL = this.raioLBase;
+
+		this.tamanhoHover = this.raioABase * 0.15;
+	}
+
+	setXeY(x, y){
+		this.posX = x;
+		this.posY = y;
 	}
 
 	hoverMouse(){
-		if(dist(mouseX, mouseY, this.posX, this.posY) <= this.raioABase/2){
-			return true;
+		if(timerHover == 50){
+			if(dist(mouseX, mouseY, this.posX, this.posY) <= this.raioABase/2){
+				console.log(true);
+				return true;
+			}
+			else{
+				return false;
+				console.log(false);
+			}
 		}
-		else{
-			return false;
+
+		timerHover++;
+
+		if(timerHover == 51){
+			timerHover = 0;
+		}
+	}
+
+	hoverMouseRect(){
+		if(timerHover == 50){
+			if(mouseX <= this.posX + this.raioABase/2 &&
+				mouseX >= this.posX - this.raioABase/2 &&
+				mouseY <= this.posY + this.raioLBase/2 &&
+				mouseY >= this.posY - this.raioLBase/2){
+
+				console.log(true);
+				return true;
+			}
+			else{
+				return false;
+				console.log(false);
+			}
+		}
+
+		timerHover++;
+
+		if(timerHover == 51){
+			timerHover = 0;
 		}
 	}
 
 	interacaoHoverEllipse(){
 		if(this.hoverMouse()){
-			this.raioA = this.raioABase + 15;
-			this.raioL = this.raioLBase + 15;
+			this.raioA = this.raioABase + this.tamanhoHover;
+			this.raioL = this.raioLBase + this.tamanhoHover;
 			this.hover = true;
+			return true;
 		}else{
 			this.raioA = this.raioABase;
 			this.raioL = this.raioLBase;
 			this.hover = false;
+			return false;
 		}
 	}
 
-	interacaoClicarMudarTela(tela){
+	interacaoHoverBox(lado){
+		if(lado == true){
+			rect(this.posX - this.raioABase/2, this.posY + this.raioLBase/3, this.rectTamL, this.rectTamA, 25);	
+		}
+		else{
+			rect(this.posX + this.raioABase/2, this.posY + this.raioLBase/3, this.rectTamL, this.rectTamA, 25);		
+		}
+
 		if(this.hoverMouse()){
-			if(mouseIsPressed){
-				TELA = tela;
+			fill("#F2F2F2");
+			noStroke();
+			if(this.rectTamL < this.rectTamLMax){
+				this.rectTamL+=this.rectTamLMax*0.2;
+			}
+			else{
+				this.rectTamL = this.rectTamLMax;
+			}
+
+			if(this.rectTamA < this.rectTamAMax){
+				this.rectTamA+=this.rectTamAMax*0.2;
+			}
+			else{
+				this.rectTamA = this.rectTamAMax;
+			}
+			
+		}else{
+			if(this.rectTamL > this.rectTamLMax*0.2){
+				this.rectTamL-=this.rectTamLMax*0.2;
+			}
+			else{
+				this.rectTamL = 0;
+			}
+
+			if(this.rectTamA > this.rectTamAMax*0.2){
+				this.rectTamA-=this.rectTamAMax*0.2;
+			}
+			else{
+				this.rectTamA = 0;
 			}
 		}
 	}
 
-	interacaoClicarMaps(){
+	interacaoClicarTela(link){
 		if(this.hoverMouse()){
 			if(mouseIsPressed){
-				window.open("https://goo.gl/maps/FjgJCgvgiX7TpC7H9");
+				window.open(link, "_self");
 			}
 		}
 	}

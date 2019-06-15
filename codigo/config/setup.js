@@ -3,9 +3,11 @@ let telaSpash;
 let telaSpash2;
 let telaInicial;
 let telaContato;
+let telaBiodiversidade;
+let telaPreservacao;
 
 function setup(){
-	createCanvas(windowWidth, windowHeight);
+	createCanvas(windowWidth*0.99, windowHeight*0.99);
 	textAlign(CENTER, CENTER);
 	imageMode(CENTER); 
 	rectMode(CENTER);
@@ -15,4 +17,9 @@ function setup(){
 	telaInicial = new TelaInicial();
 	telaContato = new TelaContato();
 	telaBiodiversidade = new TelaBiodiversidade();
+	telaPreservacao = new TelaPreservacao();
+}
+
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
 }
