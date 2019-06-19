@@ -1,8 +1,8 @@
 function preload() {
 	//Fontes
-	fonteTitulo = 			loadFont('fontes/tw-cen-mt.ttf');
-	fonteConteudo = 		loadFont('fontes/century-gothic.ttf');
-	fonteConteudoBold = 	loadFont('fontes/century-gothic-bold.otf');
+	fonteTitulo = 			loadFont('fontes/oswald-bold.ttf');
+	fonteConteudo = 		loadFont('fontes/montserrat-regular.ttf');
+	fonteConteudoBold = 	loadFont('fontes/montserrat-bold.ttf');
 
 	// Logos
 	logoUfc = 				loadImage('imagens/logos/logo-ufc.png');
@@ -34,10 +34,23 @@ function preload() {
 	// Tela Biodiversidade
 	elipseBio = 			loadImage('imagens/tela_biodiversidade/elipseBio.png');
 	tituloBio = 			loadImage('imagens/tela_biodiversidade/tituloBio.png');
-	cardsParque = [];
-	//cardsParque = loadImage();
-	cardsEspecies = [];
-	//cardsEspecies = loadImage();
+	
+	// arrays dos cards
+	var cardsEspecies = [];
+	for (var a=0; a<11; a++) {
+		cardsEspecies[a] = 	loadImage('imagens/cartoes/cards_especies/card'+a+'.png');
+	}
+	
+	var cardsParque = [];
+	for (var b=0; b<5; b++) {
+		cardsParque[b] = 	loadImage('imagens/cartoes/cards_parque/card'+b+'.png');
+	}
+
+	var cardsPreserv=[];
+	for (var c=0; c<4; c++) {
+		cardsPreserv[c] = 	loadImage('imagens/cartoes/cards_preserv/card'+c+'.png');
+	}
+	
 	corpoBio = 				loadImage('imagens/tela_biodiversidade/corpoBio.png');
 
 	// Tela Preservacao
@@ -64,4 +77,15 @@ function preload() {
 
 // Textos tela Preservacao
 let textoPreserv = [];
-textoPreserv.push("Sets the cursor to a predefined symbol or an image, or makes it visible if already hidden. If you are trying to set an image as the cursor, the recommended size is 16x16 or 32x32 pixels. The values for parameters x and y must be less than the dimensions of the image.");
+textoPreserv.push("A reciclagem é uma forma de produzir e criar coisas novas a partir de ma teriais que consideramos “inúteis” e provavelmente descartaríamos.");
+textoPreserv.push("O processo de reciclagem é uma solução importantíssima para diminuir a quantidade de lixo no meio ambiente.");
+textoPreserv.push("A coleta seletiva facilita o processo de reciclagem. Jogueo seu lixo na lixeira apropriada para ele.");
+textoPreserv.push("Busque sempre jogar o lixo nas lixeiras que estão espalhadas pelo parque.");
+textoPreserv.push("Evite poluir o parque, em vista de impedir que os animais acabem se alimentando com o lixo.");
+
+// Textos área de exibição tela
+let textoHoverInicial = "Olá! Seja bem-vindo ao Infográfico Pró-Parreão I. Eu serei o seu guia! Clique nos elementos do mapa para conhecer mais do parque. Ou, no menu acima, clique na opção de sua escolha!"
+let textoHoverBiodiv  = "Nesta opção você conhecerá mais das espécies que, assim como eu, habitam o parque!"
+let textoHoverContato = "Saiba mais sobre o funcionamento do parque e como entrar em contato com o projeto que cuida dele."
+let textoHoverPreserv = "Aqui você saberá mais sobre como ajudar a preservar o parque e as espécies que, assim como eu, vivem aqui!"
+let textoHoverHome 	  = "Neste botão você volta para cá!"
