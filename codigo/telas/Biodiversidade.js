@@ -16,8 +16,8 @@ class TelaBiodiversidade{
 		this.objTituloBio1 = new Objetos(tituloBio, width/1.6, height/6.4, width/4.8, (width/4.8) * 0.2);
 		this.objTituloBio2 = new Objetos(tituloBio, width/1.15, height/6.4, width/4.8, (width/4.8) * 0.2);
 
-		this.passarDireita = new Objetos(iconePreserv, width/15, height/2, width/15, width/15);
-		this.passarEsquerda = new Objetos(iconeBiodiversidade, width - (width/15), height/2, width/15, width/15);
+		this.passarDireita = new Objetos(paraDireita, width/15, height/2, width/15, width/15);
+		this.passarEsquerda = new Objetos(paraEsquerda, width - (width/15), height/2, width/15, width/15);
 
 		this.menu = new Menu();
 
@@ -38,12 +38,12 @@ class TelaBiodiversidade{
 
 		this.cartõesParque = [];
 		for(let i = 0; i < 5; i++){
-			this.cartõesParque.push(new Objetos(linhasContato, width/2, height/2, width/2, (width/2) * 9/16));
+			this.cartõesParque.push(new Objetos(cardsParqueT[i], width/2, height/2, width/2, (width/2) * 9/16));
 		}
 
 		this.cartõesEspecies = [];
 		for(let i = 0; i < 11; i++){
-			this.cartõesEspecies.push(new Objetos(linhasContato, width/2, height/2, width/2, (width/2) * 9/16));
+			this.cartõesEspecies.push(new Objetos(cardsEspeciesT[i], width/2, height/2, width/2, (width/2) * 9/16));
 		}
 	}
 

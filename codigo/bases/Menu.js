@@ -86,6 +86,9 @@ class Menu {
 	}
 
 	exibirTextoTelaInicial(){
-		 this.contato.interacaoHoverTextoInicial("Como pedido nas propostas dos exercícios, o usuário pode: Com a tecla ‘q’ alterar o formato do pincel (circular ou quadrado), o tamanho dele, a cor (pela tecla ‘v’ fica vermelho, ‘g’ fica verde, ‘b’ fica azul e ‘f’ fica preto, que é a cor padrão), ao pressionar a tecla ‘a’ a tela é apagada.");
+		 this.contato.interacaoHoverTextoInicial(textoHoverContato);
+		 this.preservacao.interacaoHoverTextoInicial(textoHoverPreserv);
+		 this.biodiversidade.interacaoHoverTextoInicial(textoHoverBiodiv);
+		 this.inicio.interacaoHoverTextoInicial(textoHoverHome);
 	}
 }

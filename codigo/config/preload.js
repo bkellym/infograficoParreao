@@ -1,3 +1,7 @@
+var cardsEspeciesT = [];
+var cardsParqueT = [];
+var cardsPreservT = [];
+
 function preload() {
 	//Fontes
 	fonteTitulo = 			loadFont('fontes/oswald-bold.ttf');
@@ -36,27 +40,42 @@ function preload() {
 	tituloBio = 			loadImage('imagens/tela_biodiversidade/tituloBio.png');
 	
 	// arrays dos cards
-	var cardsEspecies = [];
+	
 	for (var a=0; a<11; a++) {
-		cardsEspecies[a] = 	loadImage('imagens/cartoes/cards_especies/card'+a+'.png');
+		cardsEspeciesT.push(loadImage('imagens/cartoes/cards_especies/card'+a+'.png'));
 	}
 	
-	var cardsParque = [];
+	
 	for (var b=0; b<5; b++) {
-		cardsParque[b] = 	loadImage('imagens/cartoes/cards_parque/card'+b+'.png');
+		cardsParqueT.push(loadImage('imagens/cartoes/cards_parque/card'+b+'.png'));
 	}
 
-	var cardsPreserv=[];
-	for (var c=0; c<4; c++) {
-		cardsPreserv[c] = 	loadImage('imagens/cartoes/cards_preserv/card'+c+'.png');
-	}
 	
+	for (var c=0; c<4; c++) {
+		cardsPreservT.push(loadImage('imagens/cartoes/cards_preserv/card'+c+'.png'));
+	}
+	// navegação cards
+	paraDireita = 			loadImage('imagens/tela_biodiversidade/icone-passar-esq.png');
+	paraEsquerda = 			loadImage('imagens/tela_biodiversidade/icone-passar-dir.png');
 	corpoBio = 				loadImage('imagens/tela_biodiversidade/corpoBio.png');
 
 	// Tela Preservacao
-	ellipseAmarela = 		loadImage('imagens/tela_preservacao/ellipseAmarela.png');
-	ellipseVerde = 			loadImage('imagens/tela_preservacao/ellipseVerde.png');
-	ellipseRosa = 			loadImage('imagens/tela_preservacao/ellipseRosa.png');
+	tituloPreserv = 		loadImage('imagens/tela_preservacao/título.png'); // Título
+
+	mascoteFrente =			loadImage('imagens/tela_preservacao/mascote-frente.png');
+
+	ellipseAmarela = 		loadImage('imagens/tela_preservacao/ellipseAmarela.png'); // Ao redor
+	primeiraElipse = 		loadImage('imagens/tela_preservacao/primeira-elipse.png');
+	segundaElipse = 		loadImage('imagens/tela_preservacao/segunda-elipse.png');
+	terceiraElipse = 		loadImage('imagens/tela_preservacao/terceira-elipse.png');
+	quartaElipse = 			loadImage('imagens/tela_preservacao/quarta-elipse.png');
+	quintaElipse = 			loadImage('imagens/tela_preservacao/quinta-elipse.png');
+
+	ellipseVerde = 			loadImage('imagens/tela_preservacao/ellipseVerde.png'); // Centro
+
+	ellipseRosa = 			loadImage('imagens/tela_preservacao/ellipseRosa.png'); // Gatos
+	elipseGatos =			loadImage('imagens/tela_preservacao/elipse-gatos.png')
+	
 
 	//Ícones Básicos Globais
 	iconeVoltar = 			loadImage('imagens/icones/icone-voltar.png');
@@ -77,9 +96,9 @@ function preload() {
 
 // Textos tela Preservacao
 let textoPreserv = [];
-textoPreserv.push("A reciclagem é uma forma de produzir e criar coisas novas a partir de ma teriais que consideramos “inúteis” e provavelmente descartaríamos.");
+textoPreserv.push("A reciclagem é uma forma de produzir e criar coisas novas a partir de materiais que consideramos “inúteis” e provavelmente descartaríamos.");
 textoPreserv.push("O processo de reciclagem é uma solução importantíssima para diminuir a quantidade de lixo no meio ambiente.");
-textoPreserv.push("A coleta seletiva facilita o processo de reciclagem. Jogueo seu lixo na lixeira apropriada para ele.");
+textoPreserv.push("A coleta seletiva facilita o processo de reciclagem. Jogue o seu lixo na lixeira apropriada para ele.");
 textoPreserv.push("Busque sempre jogar o lixo nas lixeiras que estão espalhadas pelo parque.");
 textoPreserv.push("Evite poluir o parque, em vista de impedir que os animais acabem se alimentando com o lixo.");
 

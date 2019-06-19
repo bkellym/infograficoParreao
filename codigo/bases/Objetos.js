@@ -143,7 +143,6 @@ class Objetos {
 
 	interacaoHoverTextoInicial(textTelaInicial){
 
-
 		let textoCentroPreserv = new Texto(textTelaInicial, width/1.39, height/3.08, 0, 18, fonteConteudoBold);
 
 		textoCentroPreserv.exibirInConteiner(this.textInicialTamL, this.textInicialTamL);
