@@ -210,6 +210,32 @@ class Objetos {
 		return 0;
 	}
 
+	interacaoPassarCard(direcao){
+		if(direcao){
+			if(this.hoverMouseRect()){
+				if(mouseIsPressed){
+					return 1;
+				}
+				else{
+					return 0;
+				}
+			}
+			return 0;
+		}
+		else{
+			if(this.hoverMouseRect()){
+				if(mouseIsPressed){
+					return -1;
+				}
+				else{
+					return 0;
+				}
+			}
+			return 0;
+		}
+		
+	}
+
 	interacaoHoverTexto(string){
 
 		let tituloBotao = new Texto(string, this.posX + this.raioLBase * 1.5, this.posY, 0, 20, fonteConteudoBold);
@@ -229,5 +255,21 @@ class Objetos {
 
 	exibir(){
 		image(this.imagem, this.posX, this.posY, this.raioA, this.raioL);
+	}
+
+	exibirMoverEsquerda(valor){
+		image(this.imagem, this.posX - valor, this.posY, this.raioA, this.raioL);
+	}
+
+	exibirTrazerDaDireita(valor){
+		image(this.imagem, valor, this.posY, this.raioA, this.raioL);
+	}
+
+	exibirMoverDireita(valor){
+		image(this.imagem, this.posX + valor, this.posY, this.raioA, this.raioL);
+	}
+
+	exibirTrazerDaEsquerda(valor){
+		image(this.imagem, valor, this.posY, this.raioA, this.raioL);
 	}
 }
