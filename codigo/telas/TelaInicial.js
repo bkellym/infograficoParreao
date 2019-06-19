@@ -20,6 +20,7 @@ class TelaInicial{
 		this.exibicao.exibir();
 
 		this.menu.exibir();
+		this.menu.exibirTextoTelaInicial();
 
 		if(this.menu.mouseHover){
 			cursor(HAND);

@@ -14,6 +14,12 @@ class Objetos {
 		this.textPreservTamL = 0;
 		this.textPreservTamA = 0;
 
+		this.textInicialTamLMax = (width/2.5) * 2/3;
+		this.textInicialTamAMax = ((width/2.5) * 16/21) * 2/3;
+
+		this.textInicialTamL = 0;
+		this.textInicialTamA = 0;
+
 		this.hover = false;
 
 		this.raioA = this.raioABase;
@@ -116,6 +122,47 @@ class Objetos {
 			}
 			else{
 				this.textPreservTamA = 0;
+			}
+		}
+	}
+
+	interacaoHoverTextoInicial(textTelaInicial){
+
+
+		let textoCentroPreserv = new Texto(textTelaInicial, width/1.39, height/3.08, 0, 18, fonteConteudoBold);
+
+		textoCentroPreserv.exibirInConteiner(this.textInicialTamL, this.textInicialTamL);
+
+		if(this.hoverMouse()){
+			fill("#F2F2F2");
+			noStroke();
+			if(this.textInicialTamL < this.textInicialTamLMax){
+				this.textInicialTamL+=this.textInicialTamLMax*0.2;
+			}
+			else{
+				this.textInicialTamL = this.textInicialTamLMax;
+			}
+
+			if(this.textInicialTamL < this.textInicialTamAMax){
+				this.textInicialTamL+=this.textInicialTamAMax*0.2;
+			}
+			else{
+				this.textInicialTamL = this.textInicialTamAMax;
+			}
+			
+		}else{
+			if(this.textInicialTamL > this.textInicialTamLMax*0.3){
+				this.textInicialTamL-=this.textInicialTamLMax*0.3;
+			}
+			else{
+				this.textInicialTamL = 0;
+			}
+
+			if(this.textInicialTamL > this.textInicialTamAMax*0.3){
+				this.textInicialTamL-=this.textInicialTamAMax*0.3;
+			}
+			else{
+				this.textInicialTamL = 0;
 			}
 		}
 	}
