@@ -8,7 +8,7 @@ let telaPreservacao;
 
 function setup(){
 	createCanvas(windowWidth*0.99, (windowWidth*0.99) * 9/16);
-	textAlign(CENTER, CENTER);
+	textAlign(CENTER);
 	imageMode(CENTER); 
 	rectMode(CENTER);
 

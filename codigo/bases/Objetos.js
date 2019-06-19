@@ -8,11 +8,11 @@ class Objetos {
 		this.posX = x;
 		this.posY = y;
 
-		this.rectTamLMax = this.raioABase*1.2;
-		this.rectTamAMax = this.rectTamLMax/2;
+		this.textPreservTamLMax = width/5;
+		this.textPreservTamAMax = width/5;
 
-		this.rectTamL = 0;
-		this.rectTamA = 0;
+		this.textPreservTamL = 0;
+		this.textPreservTamA = 0;
 
 		this.hover = false;
 
@@ -79,44 +79,43 @@ class Objetos {
 		}
 	}
 
-	interacaoHoverBox(lado){
-		if(lado == true){
-			rect(this.posX - this.raioABase/2, this.posY + this.raioLBase/3, this.rectTamL, this.rectTamA, 25);	
-		}
-		else{
-			rect(this.posX + this.raioABase/2, this.posY + this.raioLBase/3, this.rectTamL, this.rectTamA, 25);		
-		}
+	interacaoHoverTextoPreservacao(textPreserv){
+
+
+		let textoCentroPreserv = new Texto(textPreserv, width/2, height/2, 0, 18, fonteConteudoBold);
+
+		textoCentroPreserv.exibirInConteiner(this.textPreservTamL, this.textPreservTamA);
 
 		if(this.hoverMouse()){
 			fill("#F2F2F2");
 			noStroke();
-			if(this.rectTamL < this.rectTamLMax){
-				this.rectTamL+=this.rectTamLMax*0.2;
+			if(this.textPreservTamL < this.textPreservTamLMax){
+				this.textPreservTamL+=this.textPreservTamLMax*0.2;
 			}
 			else{
-				this.rectTamL = this.rectTamLMax;
+				this.textPreservTamL = this.textPreservTamLMax;
 			}
 
-			if(this.rectTamA < this.rectTamAMax){
-				this.rectTamA+=this.rectTamAMax*0.2;
+			if(this.textPreservTamA < this.textPreservTamAMax){
+				this.textPreservTamA+=this.textPreservTamAMax*0.2;
 			}
 			else{
-				this.rectTamA = this.rectTamAMax;
+				this.textPreservTamA = this.textPreservTamAMax;
 			}
 			
 		}else{
-			if(this.rectTamL > this.rectTamLMax*0.2){
-				this.rectTamL-=this.rectTamLMax*0.2;
+			if(this.textPreservTamL > this.textPreservTamLMax*0.3){
+				this.textPreservTamL-=this.textPreservTamLMax*0.3;
 			}
 			else{
-				this.rectTamL = 0;
+				this.textPreservTamL = 0;
 			}
 
-			if(this.rectTamA > this.rectTamAMax*0.2){
-				this.rectTamA-=this.rectTamAMax*0.2;
+			if(this.textPreservTamA > this.textPreservTamAMax*0.3){
+				this.textPreservTamA-=this.textPreservTamAMax*0.3;
 			}
 			else{
-				this.rectTamA = 0;
+				this.textPreservTamA = 0;
 			}
 		}
 	}

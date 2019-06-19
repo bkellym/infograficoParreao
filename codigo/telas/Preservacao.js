@@ -11,39 +11,39 @@ class TelaPreservacao{
 					 width/(this.raioBase + (4 * 1.1)),
 					 width/(this.raioBase + (5 * 1.1))]
 
-		this.objEllipseVerde = new Objetos(ellipseVerde, width/2, height/2.4, width/3.5, width/3.5);
+		this.objEllipseVerde = new Objetos(ellipseVerde, width/2, height/2, width/3.5, width/3.5);
 
 		this.distCentro = (this.objEllipseVerde.raioABase/2);
 
 		this.objEllipseAm = [];
 
 		this.objEllipseAm.push(new Objetos(	ellipseAmarela,
-											(width/2) - ((this.distCentro + this.raio[0]/2.5)) * cos(radians(30)),
-											(height/2.4) - ((this.distCentro + this.raio[0]/2.5)) * sin(radians(30)),
+											(width/2) - ((this.distCentro + this.raio[0]/2.5)) * cos(radians(120)),
+											(height/2) - ((this.distCentro + this.raio[0]/2.5)) * sin(radians(120)),
 											this.raio[0],
 											this.raio[0]));
 
 		this.objEllipseAm.push(new Objetos(	ellipseAmarela,
-											(width/2) - ((this.distCentro + this.raio[1]/2.5)) * cos(radians(330)),
-											(height/2.4) - ((this.distCentro + this.raio[1]/2.5)) * sin(radians(330)),
+											(width/2) - ((this.distCentro + this.raio[1]/2.5)) * cos(radians(170)),
+											(height/2) - ((this.distCentro + this.raio[1]/2.5)) * sin(radians(170)),
 											this.raio[1],
 											this.raio[1]));
 
 		this.objEllipseAm.push(new Objetos(	ellipseAmarela,
-											(width/2) - ((this.distCentro + this.raio[2]/2.5)) * cos(radians(280)),
-											(height/2.4) - ((this.distCentro + this.raio[2]/2.5)) * sin(radians(280)),
+											(width/2) - ((this.distCentro + this.raio[2]/2.5)) * cos(radians(215)),
+											(height/2) - ((this.distCentro + this.raio[2]/2.5)) * sin(radians(215)),
 											this.raio[2],
 											this.raio[2]));
 
 		this.objEllipseAm.push(new Objetos(	ellipseAmarela,
-											(width/2) - ((this.distCentro + this.raio[3]/2.5)) * cos(radians(235)),
-											(height/2.4) - ((this.distCentro + this.raio[3]/2.5)) * sin(radians(235)),
+											(width/2) - ((this.distCentro + this.raio[3]/2.5)) * cos(radians(260)),
+											(height/2) - ((this.distCentro + this.raio[3]/2.5)) * sin(radians(260)),
 											this.raio[3],
 											this.raio[3]));
 
 		this.objEllipseAm.push(new Objetos(	ellipseAmarela,
-											(width/2) - ((this.distCentro + this.raio[4]/2.5)) * cos(radians(190)),
-											(height/2.4) - ((this.distCentro + this.raio[4]/2.5)) * sin(radians(190)),
+											(width/2) - ((this.distCentro + this.raio[4]/2.5)) * cos(radians(300)),
+											(height/2) - ((this.distCentro + this.raio[4]/2.5)) * sin(radians(300)),
 											this.raio[4],
 											this.raio[4]));
 
@@ -58,14 +58,11 @@ class TelaPreservacao{
 		for(let i = 0; i < 5; i++){
 			this.objEllipseAm[i].exibir();
 			this.objEllipseAm[i].interacaoHoverEllipse();
+			//this.objEllipseAm[i].interacaoHoverTextoPreservacao(textoPreserv[i]);
 		}
 
-		for(let i = 0; i < 5; i++){
-			if(i < 3)
-				this.objEllipseAm[i].interacaoHoverBox(true);
-			else
-				this.objEllipseAm[i].interacaoHoverBox(false);
-		}
+		//Teste
+		this.objEllipseAm[0].interacaoHoverTextoPreservacao(textoPreserv[0]);
 
 		this.objEllipseRosa.exibir();
 		this.objEllipseRosa.interacaoHoverEllipse();
