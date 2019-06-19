@@ -26,6 +26,7 @@ class Objetos {
 		this.raioL = this.raioLBase;
 
 		this.tamanhoHover = this.raioABase * 0.15;
+		this.tamanhoHoverMenor = this.raioABase * 0.05;
 	}
 
 	setXeY(x, y){
@@ -75,6 +76,20 @@ class Objetos {
 		if(this.hoverMouse()){
 			this.raioA = this.raioABase + this.tamanhoHover;
 			this.raioL = this.raioLBase + this.tamanhoHover;
+			this.hover = true;
+			return true;
+		}else{
+			this.raioA = this.raioABase;
+			this.raioL = this.raioLBase;
+			this.hover = false;
+			return false;
+		}
+	}
+
+	interacaoHoverRectCard(){
+		if(this.hoverMouseRect()){
+			this.raioA = this.raioABase + this.tamanhoHoverMenor;
+			this.raioL = this.raioLBase + this.tamanhoHoverMenor;
 			this.hover = true;
 			return true;
 		}else{
@@ -181,6 +196,18 @@ class Objetos {
 				window.open(link);
 			}
 		}
+	}
+
+	interacaoEscolherCard(numero){
+		if(this.hoverMouseRect()){
+			if(mouseIsPressed){
+				return numero;
+			}
+			else{
+				return 0;
+			}
+		}
+		return 0;
 	}
 
 	interacaoHoverTexto(string){
