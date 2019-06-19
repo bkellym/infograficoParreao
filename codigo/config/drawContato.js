@@ -1,3 +1,3 @@
-function draw(){
+function draw() {
 	telaContato.exibir();
 }

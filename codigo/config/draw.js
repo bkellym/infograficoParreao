@@ -19,7 +19,7 @@ var alpha = 0;
 
 function draw(){
 	background(240);
-	telaInicial.exibir();
+	maquinaEstadoTelas();
 }
 
 function maquinaEstadoTelas(){

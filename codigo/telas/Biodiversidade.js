@@ -1,6 +1,6 @@
-class TelaBiodiversidade{
+class TelaBiodiversidade {
 
-	constructor(){
+	constructor() {
 
 		this.exibindoCard = false;
 		this.transicaoCard = false;
@@ -13,8 +13,8 @@ class TelaBiodiversidade{
 		this.objElipseBio = new Objetos(elipseBio, width/3.8, height/2, width/2.2, width/2.2);
 
 		// Substituir apenas pelos títulos "Parque" e "Animais"...
-		this.objTituloBio1 = new Objetos(tituloBio, width/1.6, height/6.4, width/4.8, (width/4.8) * 0.2);
-		this.objTituloBio2 = new Objetos(tituloBio, width/1.15, height/6.4, width/4.8, (width/4.8) * 0.2);
+		this.objTituloBio1 = new Objetos(tituloBio1, width/1.6, height/6.4, width/4.8, (width/4.8) * 0.2);
+		this.objTituloBio2 = new Objetos(tituloBio2, width/1.15, height/6.4, width/4.8, (width/4.8) * 0.2);
 
 		this.passarDireita = new Objetos(paraDireita, width/15, height/2, width/15, width/15);
 		this.passarEsquerda = new Objetos(paraEsquerda, width - (width/15), height/2, width/15, width/15);
@@ -49,7 +49,7 @@ class TelaBiodiversidade{
 
 	exibir(){
 
-		background('#998533');
+		background('#40592F');
 
 		this.objElipseBio.exibir();
 

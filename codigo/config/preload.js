@@ -28,16 +28,24 @@ function preload() {
 	// Tela Contatos
 	fundoAzul = 			loadImage('imagens/tela_contatos/contatoAzul.png');
 	imgSombraContatoAzul = 	loadImage('imagens/tela_contatos/sombraContatoAzul.png');
-	fundoAmarelo = 			loadImage('imagens/tela_contatos/contatoAmarelo.png');
+	fundoAmarelo = 			loadImage('imagens/tela_contatos/contatoAmarelo1.png');
 	fundoVerde = 			loadImage('imagens/tela_contatos/contatoVerde.png');
 	imgSombraHorizontal = 	loadImage('imagens/tela_contatos/sombraContatoHorizontal.png');
+
 	elipseContato = 		loadImage('imagens/tela_contatos/elipseContato.png');
+	mascoteAtende =			loadImage('imagens/tela_contatos/mascote-atendente.png');
+
 	linhasContato = 		loadImage('imagens/tela_contatos/linhasContato.png');
+	linhasTelefone = 		loadImage('imagens/tela_contatos/linhasTelefone.png');
+	linhasInstagram =		loadImage('imagens/tela_contatos/linhasInstagram.png');
+	linhasProParreao =		loadImage('imagens/tela_contatos/linhasProParreao.png');
+	//fotoParque = 			loadImage('imagens/tela_contatos/parque.png');
 	linhasCurtas = 			loadImage('imagens/tela_contatos/linhasCurtas.png');
 
 	// Tela Biodiversidade
 	elipseBio = 			loadImage('imagens/tela_biodiversidade/elipseBio.png');
-	tituloBio = 			loadImage('imagens/tela_biodiversidade/tituloBio.png');
+	tituloBio1 = 			loadImage('imagens/tela_biodiversidade/tituloBio1.png');
+	tituloBio2 = 			loadImage('imagens/tela_biodiversidade/tituloBio2.png');
 	
 	// arrays dos cards
 	
@@ -76,22 +84,10 @@ function preload() {
 	ellipseRosa = 			loadImage('imagens/tela_preservacao/ellipseRosa.png'); // Gatos
 	elipseGatos =			loadImage('imagens/tela_preservacao/elipse-gatos.png')
 	
-
 	//Ícones Básicos Globais
 	iconeVoltar = 			loadImage('imagens/icones/icone-voltar.png');
 	iconeConstrucao = 		loadImage('imagens/icones/icone-construcao.png'); //(Temporário)
 	
-	//Fotos
-	galoCampina = 			loadImage('imagens/fotos/galo-campina.jpg');
-	iguana = 				loadImage('imagens/fotos/iguana.jpg');
-	sapoBoi = 				loadImage('imagens/fotos/sapo-boi.jpg');
-	gato = 					loadImage('imagens/fotos/gato.jpg');	
-
-	// Fundos dos cartões
-	fundoPassaro = 			loadImage('imagens/fundos/fundo-passaro.png');
-	fundoIguana = 			loadImage('imagens/fundos/fundo-iguana.png');
-	fundoGato = 			loadImage('imagens/fundos/fundo-gato.png');
-	fundoSapo = 			loadImage('imagens/fundos/fundo-sapo.png');
 }
 
 // Textos tela Preservacao
