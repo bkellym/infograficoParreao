@@ -34,6 +34,10 @@ function preload() {
 	// Tela Biodiversidade
 	elipseBio = 			loadImage('imagens/tela_biodiversidade/elipseBio.png');
 	tituloBio = 			loadImage('imagens/tela_biodiversidade/tituloBio.png');
+	cardsParque = [];
+	//cardsParque = loadImage();
+	cardsEspecies = [];
+	//cardsEspecies = loadImage();
 	corpoBio = 				loadImage('imagens/tela_biodiversidade/corpoBio.png');
 
 	// Tela Preservacao
@@ -57,10 +61,6 @@ function preload() {
 	fundoGato = 			loadImage('imagens/fundos/fundo-gato.png');
 	fundoSapo = 			loadImage('imagens/fundos/fundo-sapo.png');
 }
-
-
-
-
 
 // Textos tela Preservacao
 let textoPreserv = [];
