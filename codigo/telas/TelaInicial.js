@@ -20,5 +20,12 @@ class TelaInicial{
 		this.mapa.exibir();
 
 		this.menu.exibir();
+
+		if(this.menu.mouseHover){
+			cursor(HAND);
+		}
+		else{
+			cursor(ARROW);
+		}
 	}
 }

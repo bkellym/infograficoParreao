@@ -30,7 +30,6 @@ function preload() {
 	elipseContato = 		loadImage('imagens/tela_contatos/elipseContato.png');
 	linhasContato = 		loadImage('imagens/tela_contatos/linhasContato.png');
 	linhasCurtas = 			loadImage('imagens/tela_contatos/linhasCurtas.png');
-	linhasLongas = 			loadImage('imagens/tela_contatos/linhasLongas.png');
 
 	// Tela Biodiversidade
 	elipseBio = 			loadImage('imagens/tela_biodiversidade/elipseBio.png');

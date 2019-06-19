@@ -12,10 +12,17 @@ class TelaContato{
 		this.sombraFundoV = new Objetos(imgSombraHorizontal, width/1.52, height - (height/4.2), width/1.8, (width/1.7) * 5/12);
 
 		// Imagens de Sobreposição
-		this.elipse = new Objetos(elipseContato, width/5.5, height/2.9, width/3.3, width/3.3);
-		this.linhasAzul = new Objetos(linhasContato, width/5.5, height/1.25, width/3.3, (width/3.3) * 0.5);
-		this.linhasC = new Objetos(linhasCurtas, width/2, height/1.35, width/7.5, (width/7.5) * 0.8);
-		this.linhasL = new Objetos(linhasLongas, width/1.4, height/1.3, width/4.17, (width/4.17) * 0.6);
+		this.elipse = new Objetos(elipseContato, width/5.5, height/2.8, width/3.5, width/3.5);
+		this.linhas = [];
+		this.linhas.push(new Objetos(linhasContato, width/5.5, height/1.5, width/3.5, (width/3.5) * 8/53));
+		this.linhas.push(new Objetos(linhasContato, width/5.5, height/1.3, width/3.5, (width/3.5) * 8/53));
+		this.linhas.push(new Objetos(linhasContato, width/5.5, height/1.15, width/3.5, (width/3.5) * 8/53));
+		this.linhas.push(new Objetos(linhasCurtas, width/1.98, height/1.5, width/7, (width/7) * 8/27));
+		this.linhas.push(new Objetos(linhasContato, width/1.32, height/1.5, width/3.5, (width/3.5) * 8/53));
+		this.linhas.push(new Objetos(linhasCurtas, width/1.98, height/1.3, width/7, (width/7) * 8/27));
+		this.linhas.push(new Objetos(linhasContato, width/1.32, height/1.3, width/3.5, (width/3.5) * 8/53));
+		this.linhas.push(new Objetos(linhasCurtas, width/1.98, height/1.15, width/7, (width/7) * 8/27));
+		this.linhas.push(new Objetos(linhasContato, width/1.32, height/1.15, width/3.5, (width/3.5) * 8/53));
 	}
 
 	exibir(){
@@ -29,10 +36,18 @@ class TelaContato{
 		this.fundoV.exibir();
 
 		this.elipse.exibir();
-		this.linhasAzul.exibir();
-		this.linhasC.exibir();
-		this.linhasL.exibir();
+
+		for(let i = 0; i < 9; i++){
+			this.linhas[i].exibir();	
+		}
 
 		this.menu.exibir();
+
+		if(this.menu.mouseHover){
+			cursor(HAND);
+		}
+		else{
+			cursor(ARROW);
+		}
 	}
 }

@@ -2,13 +2,15 @@ class Menu {
 	constructor(){
 
 		this.coorBotYMin = -height/16;
-		this.coorMenuYMin = -height/(12.6)/1.7;
+		this.coorMenuYMin = -height/(12.6)/2;
 
-		this.coorBotYMax = height/16;
-		this.coorMenuYMax = height/(12.6);
+		this.coorBotYMax = height/20;
+		this.coorMenuYMax = height/(15);
 
 		this.coorBotY = this.coorBotYMin;
 		this.coorMenuY = this.coorMenuYMin;
+
+		this.mouseHover = false;
 
 		// Menu e Botões
 		this.contato = 			new Objetos(iconeContato, 			width/19.7, 	this.coorBotY, width/25.25, width/25.25);
@@ -20,8 +22,11 @@ class Menu {
 
 	exibir(){
 
-		console.log(this.coorBotY);
-		console.log(this.coorMenuY);
+		if(this.contato.hover || this.preservacao.hover || this.biodiversidade.hover || this.inicio.hover){
+			this.mouseHover = true;
+		}else{
+			this.mouseHover = false;
+		}
 
 		// Menu e Botões
 		this.menu.exibir();
@@ -44,14 +49,14 @@ class Menu {
 
 		if(this.menu.hoverMouseRect()){
 			if(this.coorBotY < this.coorBotYMax){
-				this.coorBotY += this.coorMenuYMax*0.2;
+				this.coorBotY += this.coorMenuYMax*0.3;
 			}
 			else{
 				this.coorBotY = this.coorBotYMax;
 			}
 
-			if(this.coorMenuY < this.coorMenuYMax){
-				this.coorMenuY += this.coorMenuYMax*0.2;
+			if(this.coorMenuY < this.coorMenuYMax*0.3){
+				this.coorMenuY += this.coorMenuYMax*0.3;
 			}
 			else{
 				this.coorMenuY = this.coorMenuYMax;
@@ -59,14 +64,14 @@ class Menu {
 		}
 		else{
 			if(this.coorBotY > this.coorBotYMin){
-				this.coorBotY -= this.coorMenuYMax*0.2;
+				this.coorBotY -= this.coorMenuYMax*0.3;
 			}
 			else{
 				this.coorBotY = this.coorBotYMin;
 			}
 
-			if(this.coorMenuY > this.coorMenuYMin){
-				this.coorMenuY -= this.coorMenuYMax*0.2;
+			if(this.coorMenuY > this.coorMenuYMin*0.3){
+				this.coorMenuY -= this.coorMenuYMax*0.3;
 			}
 			else{
 				this.coorMenuY = this.coorMenuYMin;

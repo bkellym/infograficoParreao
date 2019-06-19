@@ -25,5 +25,12 @@ class TelaBiodiversidade{
 		this.objCorpoBio2.exibir();
 
 		this.menu.exibir();
+
+		if(this.menu.mouseHover){
+			cursor(HAND);
+		}
+		else{
+			cursor(ARROW);
+		}
 	}
 }

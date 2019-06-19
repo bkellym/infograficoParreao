@@ -7,7 +7,7 @@ let telaBiodiversidade;
 let telaPreservacao;
 
 function setup(){
-	createCanvas(windowWidth*0.99, windowHeight*0.99);
+	createCanvas(windowWidth*0.99, (windowWidth*0.99) * 9/16);
 	textAlign(CENTER, CENTER);
 	imageMode(CENTER); 
 	rectMode(CENTER);

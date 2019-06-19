@@ -30,12 +30,10 @@ class Objetos {
 	hoverMouse(){
 		if(timerHover == 50){
 			if(dist(mouseX, mouseY, this.posX, this.posY) <= this.raioABase/2){
-				console.log(true);
 				return true;
 			}
 			else{
 				return false;
-				console.log(false);
 			}
 		}
 
@@ -52,13 +50,11 @@ class Objetos {
 				mouseX >= this.posX - this.raioABase/2 &&
 				mouseY <= this.posY + this.raioLBase/2 &&
 				mouseY >= this.posY - this.raioLBase/2){
-
-				console.log(true);
 				return true;
 			}
 			else{
 				return false;
-				console.log(false);
+
 			}
 		}
 
@@ -129,6 +125,14 @@ class Objetos {
 		if(this.hoverMouse()){
 			if(mouseIsPressed){
 				window.open(link, "_self");
+			}
+		}
+	}
+
+	interacaoClicarRect(){
+		if(this.hoverMouseRect()){
+			if(mouseIsPressed){
+				window.open(link);
 			}
 		}
 	}
